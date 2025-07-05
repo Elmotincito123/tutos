@@ -1,0 +1,27 @@
+{
+  "name": "tutorias-wawita",
+  "version": "1.0.0",
+  "description": "Plataforma de tutorías online - Wawita",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "build": "echo 'Static site - no build process needed'",
+    "preview": "npx live-server --port=4173 --open=/index.html"
+  },
+  "keywords": [
+    "tutorías",
+    "educación",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Equipo Wawita",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
