@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reuniones del Curso</title>
+    <link rel="stylesheet" href="verreuniones.css"> <!-- Tu archivo CSS -->
+</head>
+
+<body>
+  <nav>
+    <a href="galeria.html">← Volver a la Galería</a>
+</nav>
+    <div class="container">
+        <h1>Reuniones del Curso</h1>
+        <!-- Aquí se cargarán las reuniones dinámicamente desde el JS -->
+        <div id="meetingsList"></div>
+    </div>
+
+    <!-- Cargamos la API de Jitsi -->
+    <script src="https://meet.jit.si/external_api.js"></script>
+    
+    <!-- Enlazamos el archivo de JS que maneja la lógica -->
+    <script src="verreuniones.js"></script>
+</body>
+</html>
+

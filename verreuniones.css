@@ -1,0 +1,118 @@
+/* Reset de estilo y ajustes generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo de la página */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #00796b;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* Listado de reuniones */
+.meetings-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Card de reuniones */
+.meeting-card {
+    background-color: #ffffff;
+    padding: 25px;
+    width: calc(33.333% - 20px); /* Tres tarjetas por fila */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.meeting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de la card */
+.meeting-card h4 {
+    font-size: 1.4em;
+    color: #00796b;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Información de la reunión */
+.meeting-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Botón para unirse a la reunión */
+.meeting-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.meeting-card a:hover {
+    background-color: #004d40;
+}
+
+/* Agregar un efecto al hover */
+.meeting-card a:active {
+    background-color: #003d33;
+}
+
+/* Contenedor para el iframe de Jitsi */
+#jitsi-meeting {
+    width: 100%;
+    height: 250px; /* Altura más pequeña para ajustarse al diseño */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 1024px) {
+    .meeting-card {
+        width: calc(50% - 20px); /* Dos tarjetas por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .meeting-card {
+        width: 100%; /* Una tarjeta por fila en dispositivos móviles */
+    }
+
+    h1 {
+        font-size: 2em; /* Ajuste del tamaño del título */
+    }
+}

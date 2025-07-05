@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Curso</title>
+    <link rel="stylesheet" href="cursos.css">
+</head>
+<body>
+    <nav>
+        <a href="galeria.html">← Volver a la Galería</a>
+    </nav>
+    <div class="container">
+        <h1>Crear Curso</h1>
+        <form id="cursoForm">
+            <div class="form-group">
+                <label for="tutorID">ID del Tutor:</label>
+                <input type="number" id="tutorID" name="tutorID" required min="1" placeholder="ID del tutor">
+            </div>
+            <div class="form-group">
+                <label for="nombreCurso">Nombre del Curso:</label>
+                <input type="text" id="nombreCurso" name="nombreCurso" required placeholder="Nombre del curso">
+            </div>
+            <div class="form-group">
+                <label for="descripcionCurso">Descripción del Curso:</label>
+                <textarea id="descripcionCurso" name="descripcionCurso" rows="4" required placeholder="Descripción del curso"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="nivelCurso">Nivel del Curso:</label>
+                <select id="nivelCurso" name="nivelCurso" required>
+                    <option value="">Seleccionar nivel</option>
+                    <option value="Básico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fechaInicio">Fecha de Inicio:</label>
+                <input type="date" id="fechaInicio" name="fechaInicio" required>
+            </div>
+            <div class="form-group">
+                <label for="duracionCurso">Duración (semanas):</label>
+                <input type="number" id="duracionCurso" name="duracionCurso" required min="1" placeholder="Duración en semanas">
+            </div>
+            <div class="form-group">
+                <label for="sesionesPorSemana">Sesiones por Semana:</label>
+                <input type="number" id="sesionesPorSemana" name="sesionesPorSemana" required min="1" placeholder="Número de sesiones por semana">
+            </div>
+            <div class="form-group">
+                <label for="fondoCurso">Fondo del Curso:</label>
+                <input type="file" id="fondoCurso" name="fondoCurso" accept="image/*" required>
+            </div>
+            <button type="submit">Crear Curso</button>
+        </form>
+    </div>
+
+    <script src="cursos.js"></script>
+</body>
+</html>

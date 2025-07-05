@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postular a Profesor</title>
+    <link rel="stylesheet" href="StyleNoti.css">
+</head>
+<body class="CuerpoIndex">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="boton">
+            <img src="img/boton.jpeg" alt="botón de menú" class="menu">
+        </label>
+        <a href="#" class="enlace">
+            <img src="img/logo.jpeg" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="postula.html">Postula</a></li>
+            <li><a href="postulaAlumno.html">Inscribete alumno</a></li>
+            <li><a href="Notificaciones.html">Reportar error</a></li>
+        </ul>
+    </nav>
+<body>
+  <h1>Infórmanos de cualquier error</h1>
+
+  <div>
+    <label for="message">Mensaje:</label>
+    <input type="text" id="message" placeholder="Escribe un mensaje">
+    <label for="user">Usuario:</label>
+    <input type="text" id="user" placeholder="Nombre del usuario">
+    <button onclick="sendNotification()">Enviar Notificación</button>
+  </div>
+
+  <h1>Notificaciones</h1>
+  <div id="notifications"></div>
+
+  <script src="Noti.js"></script>
+  <script src="Racha.js"></script>
+</html>

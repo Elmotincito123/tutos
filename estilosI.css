@@ -1,0 +1,530 @@
+
+  
+  /* Botón para abrir el chat */
+  #openChatBtn {
+    margin-top: 20%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #openChatBtn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos del modal */
+  .modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  }
+  
+  /* Contenido del modal */
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+  }
+  
+  /* Botón de cerrar */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Caja de chat */
+  .chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Entrada de texto */
+  .chat-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .chat-input button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #45a049;
+  }
+  
+/* Reset de estilos básicos */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+.CuerpoIndex {
+    background-color: #151617;
+}
+
+/* Estilos para el menú */
+.menu {
+    height: 30px;
+}
+
+/* Estilos para los enlaces */
+.enlace {
+    position: absolute;
+    margin-left: 40px;
+}
+
+.enlace .logo {
+    height: 80px;
+    width: 100px;
+    position: relative;
+    z-index: 5;
+}
+
+/* Estilos para el nav y su menú de navegación */
+nav {
+    background-color: #00796b;
+    height: 80px;
+    width: 100%;
+    position: relative;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+li a:hover {
+    transform: scale(1.1);
+    transition: all 400ms ease;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    background-color: rgb(81, 81, 255);
+}
+
+/* Estilos para el botón de menú en pantallas pequeñas */
+.boton {
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+#check {
+    display: none;
+}
+
+/* Media queries para pantallas medianas */
+@media (max-width: 952px) {
+    .navegacion ul li a {
+        font-size: 15px;
+    }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 858px) {
+    .boton {
+        display: block;
+    }
+
+   ul {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.6s;
+        z-index: 1;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: #ffffff;
+        padding: 14px;
+        text-transform: uppercase;
+        display: block;
+    }
+
+    li a:hover {
+        background: none;
+        color: rgb(227, 27, 27);
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+
+/* Estilos para el fondo de la imagen */
+section {
+    height: 100vh;
+    background: url("img/fototutoria.jpg") no-repeat center top / 100% 100%;
+    position: relative;
+}
+
+/* Estilos de texto en la sección de inicio */
+.texto-inicio {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
+    font-weight: 600;
+}
+
+.texto-inicio h1 {
+    font-size: 78px;
+}
+
+.texto-inicio h2 {
+    font-size: 39px;
+}
+
+.texto-inicio p {
+    font-size: 19.5px;
+}
+
+.texto-inicio a {
+    color: #5151FF;
+    transition: color 200ms ease;
+}
+
+.texto-inicio a:hover {
+    color: #363636;
+}
+
+.color-secun {
+    color: #00796b;
+}
+
+/* Estilos para el video en la sección de inicio */
+.video {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    max-width: 40%;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para los encabezados */
+.p-h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: 40px;
+    background-color: #525252;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/*Los iframe inferiores*/
+
+
+/* Fondo blanco para las secciones posteriores */
+section + section {
+    background-color: #ffffff;
+}
+
+/* Estilos para las secciones posteiores */
+.secciones-posteriores {
+    background-color: #f4f4f4;
+    background-image: none;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilos para el iframe */
+.iframe-inferiores {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin-top: 0;
+}
+
+
+/* Pie de pagina */
+
+/* Estilos para el footer */
+.footer {
+    background-color: #F4F4F4;
+    color: #000000;
+    padding: 20px;
+    margin: 0;
+    border-top: 1px solid #000000;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.footer-column.contacto {
+    background-color: #F4F4F4;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Asegurarse de que los enlaces dentro de los li no tengan estilos previos */
+.footer-column li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    outline: none;
+}
+
+/* Eliminar el sombreado o efecto en los enlaces cuando están en foco o se hace clic */
+.footer-column li a:focus,
+.footer-column li a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Estilos opcionales para el contenido de los párrafos */
+.footer-column p {
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Media queries para el footer en pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        padding: 10px;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+/* Para el script Racha.js*/
+
+/* Media queries para el footer en pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        padding: 10px;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+/* Estilos para el overlay de pantalla completa */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Estilos para la caja que contiene el logo ampliado */
+.overlay-box {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 60%;
+    max-height: 60%;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilos para el logo ampliado */
+.fullscreen-logo {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+/* Estilos para la información adicional */
+.info {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: justify;
+}
+
+/* Fomulario */
+
+/* Estilos para formularios */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    background-color: #f9a825;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #c6a700;
+}
+
+/* Media queries para ajustar el formulario en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    form {
+        padding: 15px;
+        max-width: 90%;
+    }
+}

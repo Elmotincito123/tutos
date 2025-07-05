@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorías Wawita - Pagos</title>
+    <link rel="stylesheet" href="estilosI.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="boton">
+            <img src="img/boton.jpeg" alt="botón de menú" class="menu">
+        </label>
+        <a href="#" class="enlace">
+            <img src="img/logo.jpeg" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="postula.html">Postula</a></li>
+            <li><a href="postulaAlumno.html">Inscribete alumno</a></li>
+            <li><a href="Notificaciones.html">Reportar error</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="p-h1" >Realiza tu pago en línea</h1>
+
+    <form action="procesar_pago.html" method="post">
+        <label for="plan">Selecciona tu plan:</label><br>
+        <select id="plan" name="plan" required>
+            <option value="">Selecciona un plan</option>
+            <option value="basico">Plan Básico - 4 sesiones - $15</option>
+            <option value="intermedio">Plan Intermedio - 8 sesiones - $30</option>
+            <option value="avanzado">Plan Avanzado - 12 sesiones - $50</option>
+        </select><br><br>
+
+        <label for="nombre">Nombre del titular de la tarjeta:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="numero_tarjeta">Número de tarjeta de crédito/débito:</label><br>
+        <input type="text" id="numero_tarjeta" name="numero_tarjeta" pattern="\d{16}" required><br><br>
+
+        <label for="fecha_expiracion">Fecha de expiración:</label><br>
+        <input type="month" id="fecha_expiracion" name="fecha_expiracion" required><br><br>
+
+        <label for="codigo_cvv">Código CVV:</label><br>
+        <input type="text" id="codigo_cvv" name="codigo_cvv" pattern="\d{3}" required><br><br>
+
+        <input type="submit" value="Realizar Pago">
+    </form>
+    <script src="Racha.js"></script>
+</body>
+</html>

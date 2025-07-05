@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postular Alumno</title>
+    <link rel="stylesheet" href="estilosUnicos.css">
+</head>
+<body class="CuerpoIndex">
+
+    <!-- Barra de navegación -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="boton">
+            <img src="img/boton.jpeg" alt="botón de menú" class="menu">
+        </label>
+        <a href="#" class="enlace">
+            <img src="img/logo.jpeg" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="postula.html">Postula</a></li>
+            <li><a href="postulaAlumno.html">Inscribete alumno</a></li>
+            <li><a href="Notificaciones.html">Reportar error</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido del formulario de postulación como alumno -->
+    <div class="form-container">
+        <h2>Registrar Alumno</h2>
+        <form id="alumnoForm">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="nacionalidad">Nacionalidad:</label>
+                <input type="text" id="nacionalidad" name="nacionalidad" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+        
+            <div class="form-group">
+                <label>Selecciona los cursos:</label><br>
+                <label class="checkbox-container">Matemáticas
+                    <input type="checkbox" id="cursoMatematicas" name="cursos" value="Matemáticas">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Ciencias
+                    <input type="checkbox" id="cursoCiencias" name="cursos" value="Ciencias">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Historia
+                    <input type="checkbox" id="cursoHistoria" name="cursos" value="Historia">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">Lenguaje
+                    <input type="checkbox" id="cursoLenguaje" name="cursos" value="Lenguaje">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        
+            <button type="submit" class="button">Registrar Alumno</button>
+        </form>
+        
+        <h2>Alumnos Registrados</h2>
+        <table id="tablaAlumnos">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Nacionalidad</th>
+                    <th>Teléfono</th>
+                    <th>Cursos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de la tabla se llenarán con JS -->
+            </tbody>
+        </table>        
+        
+    </div>
+
+    <script src="Racha.js"></script>
+    <script src="javita.js"></script>/
+</body>
+</html>
+
+
+
+

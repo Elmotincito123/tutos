@@ -1,0 +1,164 @@
+/* Estilos generales para el cuerpo */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #00796b;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+form {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Estilos para inputs, selects, y botones */
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #00796b;
+}
+
+button {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #005f56;
+    transform: scale(1.05);
+}
+
+/* Estilos para la tabla de materiales */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #00796b;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilos para filas alternadas en la tabla */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos de los botones dentro de la tabla */
+table button {
+    background-color: #00796b;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+table button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+table .delete-btn {
+    background-color: #e57373;
+}
+
+table .delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Mejoras para la interfaz en dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    /* Ajustar el tamaño de las celdas de la tabla */
+    th, td {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Estilos adicionales para pantallas más pequeñas */
+    form {
+        margin-bottom: 30px;
+    }
+
+    input, select, button {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}

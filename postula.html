@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postular a Profesor</title>
+    <link rel="stylesheet" href="StylesM.css">
+</head>
+<body class="CuerpoIndex">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="boton">
+            <img src="img/boton.jpeg" alt="botón de menú" class="menu">
+        </label>
+        <a href="#" class="enlace">
+            <img src="img/logo.jpeg" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="postula.html">Postula</a></li>
+            <li><a href="postulaAlumno.html">Inscribete alumno</a></li>
+            <li><a href="Notificaciones.html">Reportar error</a></li>
+        </ul>
+    </nav>
+
+  <div class="container">
+    <h1>Postular Tutores</h1>
+
+    <div id="alertSuccess" class="alert alert-success">
+      Tutor guardado exitosamente
+    </div>
+
+    <div id="alertError" class="alert alert-error">
+      Por favor complete todos los campos correctamente
+    </div>
+
+    <form id="tutorForm">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="input-large" required>
+      </div>
+
+      <div class="form-group">
+        <label for="asignatura">Asignatura:</label>
+        <select id="asignatura" name="asignatura" class="input-small" required>
+          <option value="">Seleccione...</option>
+          <option value="Matemáticas">Matemáticas</option>
+          <option value="Física">Física</option>
+          <option value="Química">Química</option>
+          <option value="Biología">Biología</option>
+          <option value="Historia">Historia</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="disponibilidad">Disponibilidad:</label>
+        <select id="disponibilidad" name="disponibilidad" class="input-small" required>
+          <option value="">Seleccione...</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="idioma">Idioma:</label>
+        <select id="idioma" name="idioma" class="input-small" required>
+          <option value="">Seleccione...</option>
+          <option value="Español">Español</option>
+          <option value="Inglés">Inglés</option>
+          <option value="Francés">Francés</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="nivel">Nivel de Dificultad:</label>
+        <select id="nivel" name="nivel" class="input-small" required>
+          <option value="">Seleccione...</option>
+          <option value="Básico">Básico</option>
+          <option value="Intermedio">Intermedio</option>
+          <option value="Avanzado">Avanzado</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="duracion">Duración del Curso:</label>
+        <select id="duracion" name="duracion" class="input-small" required>
+          <option value="">Seleccione...</option>
+          <option value="1 Mes">1 Mes</option>
+          <option value="3 Meses">3 Meses</option>
+          <option value="6 Meses">6 Meses</option>
+          <option value="12 Meses">12 Meses</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="notas">Notas del Tutor:</label>
+        <textarea id="notas" name="notas" class="input-large" required></textarea>
+      </div>
+
+      <button type="submit">Registrar Tutor</button>
+    </form>
+
+    <h2>Listado de Tutores</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Asignatura</th>
+          <th>Disponibilidad</th>
+          <th>Idioma</th>
+          <th>Nivel de Dificultad</th>
+          <th>Duración del Curso</th>
+          <th>Notas</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tutorList">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="Racha.js"></script>
+  <script src="ScriptM.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorías Wawita</title>
+    <link rel="stylesheet" href="estilosI.css">
+</head>
+<body class="CuerpoIndex">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="boton">
+            <img src="img/boton.jpeg" alt="botón de menú" class="menu">
+        </label>
+        <a href="#" class="enlace">
+            <img src="img/logo.jpeg" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="postula.html">Postula</a></li>
+            <li><a href="postulaAlumno.html">Inscríbete alumno</a></li>
+            <li><a href="Notificaciones.html">Reportar error</a></li>
+            <!-- Botón de chat -->
+            <li><button id="openChatBtn" class="chat-btn">Chat</button></li>
+        </ul>
+    </nav>
+
+    <!-- Ventana de chat (modal) -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <span id="closeChatBtn" class="close">&times;</span>
+            <h2>Chat en Tiempo Real</h2>
+            <div id="chatBox" class="chat-box">
+                <!-- Aquí se mostrarán los mensajes -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Escribe un mensaje..." />
+                <button id="sendBtn">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="texto-inicio">
+            <h1>Tutorías <span class="color-secun">Wawita</span></h1>
+            <h2>La página de tutorías <span class="color-secun">definitiva</span></h2>
+            <p>Wawita es una página de tutorías que se enfoca en la seguridad, rapidez, eficacia y adaptación a cualquier usuario que quiera usarla. Gracias a sus funcionalidades, Wawita 
+                consigue posicionarse entre las mejores páginas de tutorías del mercado. <a href="#porque-wawita">Leer más -></a></p>
+        </div>
+        <div class="video">
+            <video controls>
+                <source src="vid/Presentación.mkv" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    <section class="secciones-inferioes">
+        <iframe src="Porque Wawita.html" class="iframe-inferiores"></iframe>
+    </section>
+    <section class="secciones-inferioes">
+        <iframe src="Nosotros.html" class="iframe-inferiores"></iframe>
+    </section>
+    <footer class="footer">
+        <div class="footer-column">
+            <ul>
+                <li><a href="">Términosz</a></li>
+                <li><a href="Política de privacidad.html">Política de privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Productos</h3>
+            <ul>
+                <li>Wawita Launcher</li>
+                <li>Wawita Client</li>
+                <li>Wawita Mobile</li>
+                <li>Wawita Ads</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Recursos</h3>
+            <ul>
+                <li>Tutoriales y guías</li>
+                <li>Blog</li>
+                <li>Centro de soporte</li>
+                <li>Partners</li>
+                <li>Wawita+</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Nuestras redes</h3>
+            <ul>
+                <li>YouTube</li>
+                <li>Discord</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Patreon</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>¡Contáctanos!</h3>
+            <p>contacto@wawita.es</p>
+            <p>Estado</p>
+        </div>
+    </footer>
+    <script src="Racha.js"></script>
+</body>
+</html>

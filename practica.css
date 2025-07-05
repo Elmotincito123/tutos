@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+.navegacion{
+    background-color: #2cfdfd;
+    height: 70px;
+    width: 100%;
+}
+.navegacion .contenedor{
+    float: right;
+    margin-right: 25px;
+}
+.navegacion .contenedor .contenido{
+    display: inline-block;
+    line-height: 70px;
+}
+.navegacion .contenedor .contenido .informacion{
+    padding: 15px;
+    font-size: 20px;
+    color: rgb(20, 13, 64);
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow:  2px 5px black;
+}
+.contenido .informacion:hover{
+    background: #9bf4f4;
+    transition: all 400ms ease;
+}
+
+.formulario{
+    background-color: aliceblue;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+.formulario .formula{
+    padding: 20px;
+}
