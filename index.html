@@ -22,25 +22,10 @@
             <li><a href="postula.html">Postula</a></li>
             <li><a href="postulaAlumno.html">Inscríbete alumno</a></li>
             <li><a href="Notificaciones.html">Reportar error</a></li>
-            <!-- Botón de chat -->
-            <li><button id="openChatBtn" class="chat-btn">Chat</button></li>
+            <!-- Los elementos de autenticación se agregan dinámicamente -->
         </ul>
     </nav>
 
-    <!-- Ventana de chat (modal) -->
-    <div id="chatModal" class="modal">
-        <div class="modal-content">
-            <span id="closeChatBtn" class="close">&times;</span>
-            <h2>Chat en Tiempo Real</h2>
-            <div id="chatBox" class="chat-box">
-                <!-- Aquí se mostrarán los mensajes -->
-            </div>
-            <div class="chat-input">
-                <input type="text" id="messageInput" placeholder="Escribe un mensaje..." />
-                <button id="sendBtn">Enviar</button>
-            </div>
-        </div>
-    </div>
     <section>
         <div class="texto-inicio">
             <h1>Tutorías <span class="color-secun">Wawita</span></h1>
@@ -63,7 +48,7 @@
     <footer class="footer">
         <div class="footer-column">
             <ul>
-                <li><a href="">Términosz</a></li>
+                <li><a href="">Términos</a></li>
                 <li><a href="Política de privacidad.html">Política de privacidad</a></li>
             </ul>
         </div>
@@ -102,6 +87,77 @@
             <p>Estado</p>
         </div>
     </footer>
+    
+    <!-- Chatbot integrado -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="bot-avatar">
+                <img src="img/logo.jpeg" alt="Wawita Bot">
+            </div>
+            <div class="bot-info">
+                <h3>Asistente Wawita</h3>
+                <span class="status online">En línea</span>
+            </div>
+            <button class="minimize-btn" onclick="toggleChatbot()">−</button>
+        </div>
+        
+        <div class="chatbot-body">
+            <div class="messages-container" id="messagesContainer">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        ¡Hola! 👋 Soy el asistente virtual de Wawita. ¿En qué puedo ayudarte hoy?
+                    </div>
+                    <div class="message-time">Ahora</div>
+                </div>
+                
+                <div class="quick-actions">
+                    <button class="quick-btn" onclick="sendQuickMessage('¿Cómo crear un curso?')">
+                        📚 Crear curso
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('¿Cómo unirme a una reunión?')">
+                        🎥 Unirse a reunión
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Problemas técnicos')">
+                        🔧 Soporte técnico
+                    </button>
+                </div>
+            </div>
+            
+            <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span>Wawita está escribiendo...</span>
+            </div>
+        </div>
+        
+        <div class="chatbot-footer">
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Escribe tu mensaje..." maxlength="500">
+                <button id="sendButton" onclick="sendMessage()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="footer-info">
+                <small>Powered by Wawita AI • <a href="#" onclick="clearChat()">Limpiar chat</a></small>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Botón flotante para abrir el chatbot -->
+    <div class="chatbot-toggle" id="chatbotToggle" onclick="toggleChatbot()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+        </svg>
+    </div>
+    
+    <script src="auth.js"></script>
+    <script src="validaciones.js"></script>
+    <script src="chatbot.js"></script>
     <script src="Racha.js"></script>
 </body>
 </html>
